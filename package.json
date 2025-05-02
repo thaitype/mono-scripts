@@ -4,8 +4,8 @@
   "description": "A lightweight toolkit for managing and running shared scripts across multi-package repositories with ease.",
   "type": "module",
   "exports": {
-    "types": "./index.d.ts",
-    "default": "./index.js"
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
   },
   "scripts": {
     "test:coverage": "vitest run --coverage",
