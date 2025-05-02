@@ -41,6 +41,10 @@
     "README.md",
     "package.json"
   ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/thaitype/mono-scripts.git"
