@@ -1,6 +1,6 @@
 {
   "name": "@thaitype/mono-scripts",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A lightweight toolkit for managing and running shared scripts across multi-package repositories with ease.",
   "type": "module",
   "exports": {
