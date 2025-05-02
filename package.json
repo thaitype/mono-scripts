@@ -1,35 +1,31 @@
 {
-  "name": "@thaitype/minimal-typescript-node-esm-starter",
+  "name": "@thaitype/mono-scripts",
   "version": "0.0.0",
-  "description": "minimal-typescript-node-esm-starter",
-  "main": "./dist/main.cjs",
-  "module": "./dist/main.js",
-  "types": "./dist/main.d.ts",
+  "description": "A lightweight toolkit for managing and running shared scripts across multi-package repositories with ease.",
+  "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/main.d.ts",
-      "import": "./dist/main.js",
-      "default": "./dist/main.cjs"
-    }
+    "types": "./index.d.ts",
+    "default": "./index.js"
   },
   "scripts": {
-    "start": "tsx src/main.ts",
-    "dev": "tsx watch src/main.ts",
     "test:coverage": "vitest run --coverage",
     "test": "vitest",
     "test:ci": "vitest run",
-    "build": "tsup src/main.ts --dts --format esm,cjs",
+    "release": "bun run build && release-it",
+    "build": "tsup src/index.ts --dts --format esm",
     "format": "prettier -w src",
     "lint": "tsc --noEmit && eslint ./src && prettier -c src",
     "lint:fix": "eslint --fix ./src && prettier -w src"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
+    "@types/node": "^22.15.3",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@vitest/coverage-v8": "^3.0.9",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-only-warn": "^1.1.0",
+    "release-it": "^17.3.0",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
@@ -47,7 +43,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/thaitype/minimal-typescript-node-esm-starter.git"
+    "url": "https://github.com/thaitype/mono-scripts.git"
   },
-  "homepage": "https://github.com/thaitype/minimal-typescript-node-esm-starter"
+  "homepage": "https://github.com/thaitype/mono-scripts",
+  "dependencies": {
+    "execa": "^9.5.2",
+    "picocolors": "^1.1.1"
+  }
 }
